@@ -9,8 +9,11 @@ body {
 .images {
   width: 280px;
   height: 200px;
+  /* width: 75%;
+  height: 50%; */
   border: 1px solid #d3d3d3;
   border-radius: 10px;
+  background: url(../img/loading.gif) 50% no-repeat;
 }
 
 .search-header {

@@ -1,15 +1,17 @@
-const API_KEY = 'AIzaSyBuPZIwjqgs4a0oBqyg_ZzAZAkqxKrGpt4';
-const cx = '006753618627947867668:4fb2xk26yb0';
+var API_KEY = 'AIzaSyBuPZIwjqgs4a0oBqyg_ZzAZAkqxKrGpt4';
+var cx = '006753618627947867668:4fb2xk26yb0';
 
 var form = document.querySelector('#search');
-// const API_KEY = 'AIzaSyBkwfJrKfdiDH46XaDLQelzGe84md52GXU';
-// document.querySelector("iframe").addEventListener("load", function() {
 
-//   this.style.backgroundColor = "red";
-//   alert(this.nodeName);
+//in case the image is not loaded
+function imgError(image) {
+  image.onerror = '';
+  console.log('Image errror:' + image.src);
+  image.src = '../img/no-image-available.jpg';
+  return true;
+}
 
-// });
-//This function displays the search result in their continers
+//This function displays the search result in their respective continers
 function displayImage(response) {
   document.getElementById('results').innerHTML = '';
   document.getElementById('images').innerHTML = '';
@@ -30,6 +32,7 @@ function displayImage(response) {
         "'_blank'" +
         '><img ' +
         "class='images'" +
+        "onerror='imgError(this)'" +
         'src=' +
         src +
         ' /></a>';

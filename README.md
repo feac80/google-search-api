@@ -3,10 +3,14 @@ Check this website https://freshman.tech/wikipedia-javascript/
 
 Styling search-bar
 https://www.youtube.com/watch?v=rrN3KomhPIw
+
 https://www.youtube.com/watch?v=38rJPEqapoA
 
 handling errors
 https://stackoverflow.com/questions/34078809/javascript-xml-http-request-using-the-google-custom-search-element-api
+
+pagination style
+https://www.youtube.com/watch?v=D2EvkowvUqA
 
 ---
 
