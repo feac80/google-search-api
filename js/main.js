@@ -1,7 +1,7 @@
 (function() {
   'use strict';
-  var API_KEY = 'AIzaSyBuPZIwjqgs4a0oBqyg_ZzAZAkqxKrGpt4';
-  var cx = '006753618627947867668:4fb2xk26yb0';
+  var API_KEY = 'AIzaSyAxOgfzAeZGuz0fAoq9yUo4PP-LcVUjBKs';
+  var cx = '008346752897722787957:ujvph0wixoi';
 
   var form = document.querySelector('#search');
 
