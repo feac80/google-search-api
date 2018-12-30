@@ -1,14 +1,16 @@
 * {
+  color: #333;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
 }
 .images {
-  width: 280px;
-  height: 200px;
+  width: 250px;
+  height: 180px;
   /* width: 75%;
   height: 50%; */
   border: 1px solid #d3d3d3;
@@ -17,7 +19,7 @@ body {
 }
 
 .search-header {
-  margin: 10px auto;
+  margin: 25px auto;
   text-align: center;
 }
 #search-item {
@@ -30,19 +32,21 @@ body {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
-
 #submit {
   border: 1px solid #d3d3d3;
   font-size: 16px;
 
   padding: 10px;
-  background: #e4eaee;
+  background: #00b5c3;
   font-weight: bold;
   cursor: pointer;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-
+#submit:hover {
+  color: white;
+  font-weight: bold;
+}
 .search-images {
   width: 69%;
   float: left;
@@ -71,6 +75,9 @@ body {
 }
 ul {
   list-style-type: none;
+  border: 1px solid #d3d3d3;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 li {
   padding: 2px;
@@ -84,8 +91,7 @@ li {
 .search-results a:link,
 .search-results a:visited {
   text-decoration: none;
-
-  color: black;
+  /* color: black; */
   margin-bottom: 1px;
 }
 
@@ -93,4 +99,26 @@ li {
 .search-results a:active {
   background-color: #e2dfdf;
   color: purple;
+}
+
+.pagination {
+  width: 100%;
+  text-align: center;
+  visibility: hidden;
+}
+.pagination a {
+  color: #000000;
+  float: center;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border-radius: 10px;
+}
+.pagination a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
 }

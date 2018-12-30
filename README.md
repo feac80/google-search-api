@@ -27,6 +27,12 @@ https://www.youtube.com/watch?v=D2EvkowvUqA
       </script>
       <gcse:search></gcse:search> -->
 
+Hmm. We’re having trouble finding that site.
+
+We can’t connect to the server at www.google.es.
+
+If that address is correct,
+
     <!-- <script>
       //Handler for response from google.
       function hndlr(response) {
