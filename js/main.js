@@ -1,11 +1,8 @@
 (function() {
   'use strict';
-  // var API_KEY = 'your api key';
-  // var cx = ':your cx key';
+  var API_KEY = 'AIzaSyBuPZIwjqgs4a0oBqyg_ZzAZAkqxKrGpt4';
+  var cx = '006753618627947867668:4fb2xk26yb0';
 
-  var respond = {
-    error: {}
-  };
   var form = document.querySelector('#search');
 
   //in case the image is not loaded
