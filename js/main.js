@@ -1,7 +1,7 @@
 (function() {
   'use strict';
-  var API_KEY = 'your api key';
-  var cx = ':your cx key';
+  // var API_KEY = 'your api key';
+  // var cx = ':your cx key';
 
   var respond = {
     error: {}
@@ -93,7 +93,8 @@
         }
       } catch (e) {
         console.log(e);
-        window.location.href = 'http://127.0.0.1:5500/error.html';
+        window.location.href =
+          'https://google-search-engine-api.herokuapp.com/error.html';
       }
     };
   }
