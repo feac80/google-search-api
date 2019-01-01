@@ -28,7 +28,6 @@ function updatePage(newData) {
     var item = response.items[i];
     if (item.pagemap != undefined && item.pagemap.cse_image != undefined) {
       var src = item.pagemap.cse_image[0].src;
-      // var url = (response.items[i].
       //make visible the results ul box
       document.getElementById('results').style.visibility = 'visible';
       document.getElementById('results').innerHTML +=
@@ -54,6 +53,7 @@ function updatePage(newData) {
     }
   }
 }
+//creating the url with all the required parameters
 function buildUrl(startIndex) {
   var startValue = startIndex + (startIndex - 1) * 9;
 
@@ -71,6 +71,7 @@ function buildUrl(startIndex) {
     startValue;
   return url;
 }
+//sending http request
 function sendRequest(startIndex) {
   var Http = new XMLHttpRequest();
   var url = buildUrl(startIndex);
@@ -82,6 +83,8 @@ function sendRequest(startIndex) {
       updatePage(Http.responseText);
     }
     try {
+      // catching errors for status response 403, 400 , etc
+      // and redirecting the user to error page.
       if (Http.readyState == 4 && Http.status !== 200) {
         console.log(Http.status);
 
@@ -89,16 +92,17 @@ function sendRequest(startIndex) {
       }
     } catch (e) {
       console.log(e);
-      // window.location.href = 'http://127.0.0.1:5500/error.html';
+      window.location.href = 'http://127.0.0.1:5500/error.html';
     }
   };
 }
-
+//hlanding the submit event into the form
 form.addEventListener('submit', function(e) {
   e.preventDefault();
   var currentPage = 1;
   sendRequest(currentPage);
 });
+//toggling the active class to the page container
 document.getElementById('pages').onclick = function(e) {
   var activePage = document.getElementsByClassName('active');
   activePage[0].classList.toggle('active');
