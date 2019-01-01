@@ -1,19 +1,13 @@
-// (function() {
 'use strict';
 var API_KEY = 'AIzaSyBuPZIwjqgs4a0oBqyg_ZzAZAkqxKrGpt4';
 var cx = '006753618627947867668:4fb2xk26yb0';
 
-// var respond = {
-//   error: {}
-// };
 var form = document.querySelector('#search');
 
-//in case the image is not loaded
-
+//in case the image is not loaded it s replaced by a 'not available image'
 function imgError(image) {
   try {
     image.onerror = '';
-    // console.log('Image error:' + image.src);
     image.src = '../img/no-image-available.jpg';
     throw new Error('Image not available');
   } catch (e) {
@@ -22,15 +16,15 @@ function imgError(image) {
   return true;
 }
 
-//This function displays the search result in their respective containers
+//This function displays the search results in their respective containers
 function updatePage(newData) {
+  //clear the search results containers
   document.getElementById('results').innerHTML = '';
   document.getElementById('images').innerHTML = '';
 
   var response = JSON.parse(newData);
-  // console.log(response);
+  //iterating over the response object
   for (var i = 0; i < response.items.length; i++) {
-    // in production code, item.htmlTitle should have the HTML entities escaped.'&q=' + encodeURIComponent(searchTerm);
     var item = response.items[i];
     if (item.pagemap != undefined && item.pagemap.cse_image != undefined) {
       var src = item.pagemap.cse_image[0].src;
@@ -104,7 +98,6 @@ form.addEventListener('submit', function(e) {
   e.preventDefault();
   var currentPage = 1;
   sendRequest(currentPage);
-  // .search-results
 });
 document.getElementById('pages').onclick = function(e) {
   var activePage = document.getElementsByClassName('active');
@@ -113,4 +106,3 @@ document.getElementById('pages').onclick = function(e) {
   e.srcElement.classList.toggle('active');
   sendRequest(Number(e.srcElement.textContent));
 };
-// })();

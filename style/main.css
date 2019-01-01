@@ -5,20 +5,17 @@
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
-  /* overflow: hidden; */
   background-color: #f5f2f2;
   color: #333;
 }
 .images {
-  max-width: 100%;
+  /* max-width: 100%;
+  max-height: 75%; */
+  height: 200px;
+  width: 200px;
   border: 1px solid #d3d3d3;
-
   transition: transform 2s;
-  /* overflow: hidden; */
-  width: 250px;
-  height: 180px;
-  /* width: 75%; */
-  max-height: 100%;
+
   border: 1px solid #d3d3d3;
   border-radius: 10px;
   background: url(../img/loading.gif) 50% no-repeat;
@@ -27,17 +24,10 @@ body {
   transform: scale(0.8);
 }
 
-/* .search-header {
-  margin: 25px auto;
-  text-align: center;
-} */
 form {
   max-width: 500px;
   margin: 25px auto;
 }
-/* .fas fa-search {
-  position: absolute;
-} */
 
 input[type='text'] {
   border: none;
@@ -52,17 +42,14 @@ input[type='text'] {
 input:focus {
   padding: 9px;
   border: 1px solid dodgerblue;
-  /* outline: solid 1px dodgerblue; */
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-
   border-right: none;
 }
 
 #submit {
   float: left;
   background: dodgerblue;
-
   width: 15%;
   color: white;
   padding: 10px;
@@ -91,19 +78,13 @@ input:focus {
 }
 #text-results {
   width: 30%;
-  /* display: block; */
   float: right;
-
-  /* background-color: #d3d3d3; */
   margin: 15px 5px 5px 5px;
-
-  /* width: 100%; */
 }
 
 .search-images {
   width: 67%;
   float: left;
-  /* background-color: #d3d3d3; */
   margin: 15px 5px 5px 5px;
 }
 
@@ -112,19 +93,17 @@ input:focus {
 }
 .search-results {
   width: 100%;
-  /* display: block; */
-  /* float: right; */
   visibility: hidden;
   margin-top: 15px;
   background-color: white;
-  /* background-color: #d3d3d3; */
   margin: 1px;
   border-radius: 10px;
 }
 
 .search-images a {
   float: left;
-  width: 33.33%;
+  /* width: 33.33%; */
+  width: 25%;
   padding: 2px;
 }
 ul {
@@ -147,7 +126,6 @@ li a:active {
   display: list-item;
   border-radius: 10px;
   padding: 3px;
-  /* list-style-type: none; */
 }
 
 .search-results a {
@@ -158,7 +136,6 @@ li a:active {
 .search-results a:link,
 .search-results a:visited {
   text-decoration: none;
-  /* color: black; */
   margin-bottom: 1px;
 }
 
@@ -184,4 +161,7 @@ li a:active {
 
 .pagination a:hover:not(.active) {
   background-color: #ddd;
+}
+
+@media screen and (min-width: 1240px) {
 }
